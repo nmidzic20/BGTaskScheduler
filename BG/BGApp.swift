@@ -37,23 +37,19 @@ class SceneDelegate: NSObject, UIWindowSceneDelegate {
         scheduleAppRefresh()
         scheduleDatabaseCleaning()
     }
-    func scheduleAppRefresh()
-    {
-        let request = BGAppRefreshTaskRequest(identifier: "hr.foi.nmidzic20.BG.refresh")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 0)
-        
-        do {
-            try BGTaskScheduler.shared.submit(request)
-        } catch {
-            print("Could not schedule app refresh: \(error)")
-        }
-    }
     
     func scheduleDatabaseCleaning()
     {
+        let lastCleaned = MockServer.mockServer.lastCleaned
+        print(lastCleaned)
+        let now = Date()
+        let oneMinute = TimeInterval(60)
+
+        guard now > (lastCleaned + oneMinute) else { return }
+        
         let request = BGProcessingTaskRequest(identifier: "hr.foi.nmidzic20.BG.clean")
         request.requiresNetworkConnectivity = false
-        request.requiresExternalPower = true
+        request.requiresExternalPower = false
         
         do {
             try BGTaskScheduler.shared.submit(request)
@@ -107,7 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
         queue.addOperation(operation)
     }
     
-    func handleDatabaseCleaning(task: BGProcessingTask) {
+    func handleDatabaseCleaning(task: BGProcessingTask)
+    {
         let queue = OperationQueue()
         queue.maxConcurrentOperationCount = 1
 
@@ -129,17 +126,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate {
         queue.addOperation(cleanDatabaseOperation)
     }
     
-    func scheduleAppRefresh()
-    {
-        let request = BGAppRefreshTaskRequest(identifier: "hr.foi.nmidzic20.BG.refresh")
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 0)
-        
-        do {
-            try BGTaskScheduler.shared.submit(request)
-        } catch {
-            print("Could not schedule app refresh: \(error)")
-        }
-    }
 }
 
+func scheduleAppRefresh()
+{
+    let request = BGAppRefreshTaskRequest(identifier: "hr.foi.nmidzic20.BG.refresh")
+    request.earliestBeginDate = Date(timeIntervalSinceNow: 0)
+    
+    do {
+        try BGTaskScheduler.shared.submit(request)
+    } catch {
+        print("Could not schedule app refresh: \(error)")
+    }
+}
 

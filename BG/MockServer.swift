@@ -41,6 +41,7 @@ import CoreData
         return BlockOperation
         {
             print("Deleting..")
+            Thread.sleep(forTimeInterval: 2)
             self.data = ""
         }
     }
