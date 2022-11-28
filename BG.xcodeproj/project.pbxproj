@@ -15,7 +15,6 @@
 		E40D06F229339CC200A197F5 /* BGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D06F129339CC200A197F5 /* BGUITests.swift */; };
 		E40D06F429339CC200A197F5 /* BGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D06F329339CC200A197F5 /* BGUITestsLaunchTests.swift */; };
 		E40D07032933B11000A197F5 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D07022933B11000A197F5 /* MockServer.swift */; };
-		E40D62BC293528ED003991E5 /* img-4033_iumO5io1.mov in Resources */ = {isa = PBXBuildFile; fileRef = E40D62BB293528ED003991E5 /* img-4033_iumO5io1.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		E40D06F329339CC200A197F5 /* BGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E40D07022933B11000A197F5 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		E40D07042933D04300A197F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		E40D62BB293528ED003991E5 /* img-4033_iumO5io1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "img-4033_iumO5io1.mov"; path = "../../Downloads/img-4033_iumO5io1.mov"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 		E40D06CA29339CC100A197F5 = {
 			isa = PBXGroup;
 			children = (
-				E40D62BB293528ED003991E5 /* img-4033_iumO5io1.mov */,
 				E40D06D529339CC100A197F5 /* BG */,
 				E40D06E629339CC200A197F5 /* BGTests */,
 				E40D06F029339CC200A197F5 /* BGUITests */,
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40D06DE29339CC200A197F5 /* Preview Assets.xcassets in Resources */,
-				E40D62BC293528ED003991E5 /* img-4033_iumO5io1.mov in Resources */,
 				E40D06DB29339CC200A197F5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
