@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var mockServer = MockServer.mockServer
-    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack {
