@@ -14,6 +14,7 @@
 		E40D06E829339CC200A197F5 /* BGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D06E729339CC200A197F5 /* BGTests.swift */; };
 		E40D06F229339CC200A197F5 /* BGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D06F129339CC200A197F5 /* BGUITests.swift */; };
 		E40D06F429339CC200A197F5 /* BGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D06F329339CC200A197F5 /* BGUITestsLaunchTests.swift */; };
+		E40D07032933B11000A197F5 /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40D07022933B11000A197F5 /* MockServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		E40D06ED29339CC200A197F5 /* BGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40D06F129339CC200A197F5 /* BGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUITests.swift; sourceTree = "<group>"; };
 		E40D06F329339CC200A197F5 /* BGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E40D07022933B11000A197F5 /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
+		E40D07042933D04300A197F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +97,10 @@
 		E40D06D529339CC100A197F5 /* BG */ = {
 			isa = PBXGroup;
 			children = (
+				E40D07042933D04300A197F5 /* Info.plist */,
 				E40D06D629339CC100A197F5 /* BGApp.swift */,
 				E40D06D829339CC100A197F5 /* ContentView.swift */,
+				E40D07022933B11000A197F5 /* MockServer.swift */,
 				E40D06DA29339CC200A197F5 /* Assets.xcassets */,
 				E40D06DC29339CC200A197F5 /* Preview Content */,
 			);
@@ -257,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E40D07032933B11000A197F5 /* MockServer.swift in Sources */,
 				E40D06D929339CC100A197F5 /* ContentView.swift in Sources */,
 				E40D06D729339CC100A197F5 /* BGApp.swift in Sources */,
 			);
@@ -420,6 +426,8 @@
 				DEVELOPMENT_TEAM = 4DH3N86F88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BG/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -430,6 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = hr.foi.nmidzic20.BG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -449,6 +458,8 @@
 				DEVELOPMENT_TEAM = 4DH3N86F88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BG/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -459,6 +470,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = hr.foi.nmidzic20.BG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
