@@ -22,7 +22,9 @@ First, we need to build for a physical device, and when the application opens as
 
 We can simulate the launch of a background service using the command from Apple's documentation:
 
+```
 e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@“IDENTIFIER“]
+```
 
 Instead of the word "IDENTIFIER", you should input the string identifier of the task (here, for refreshing, it is "hr.foi.nmidzic20.BG.refresh"). Also, when copying, make sure to pay attention to the quotes being used, as copying might introduce syntax errors.
 
