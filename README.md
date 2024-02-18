@@ -6,7 +6,7 @@ In this example, the use of background tasks for an application that displays so
 
 Initially, the data will only consist of one piece of information, in the form of the word "podatak" ("data") and the time of its generation, to make it easier to distinguish between different pieces of data. When the application is opened, the view looks as shown in the image below.
 
-<img src="./initial-view.png" height="500">
+<img src="./initial-view.png" height="300">
 
 The class MockServer will be responsible for fetching data from the server. Since there is no real server in this example, it will simply generate some data along with the date of their generation, which simulate news that should come to the application.
 
