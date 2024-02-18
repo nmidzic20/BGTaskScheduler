@@ -18,7 +18,7 @@ The issue now is how to test it. Essentially, we should observe over time how th
 
 First, we need to build for a physical device, and when the application opens as shown on the previous image, we exit it to ensure that the `sceneDidEnterBackground` method is activated, which schedules the background services. Then we return to the application. Now, at the bottom of the project, we can click the pause button, and the debugger console will open.
 
-![debugger1](./debugger1.png)
+<img src="./debugger1.png" height="300">
 
 We can simulate the launch of a background service using the command from Apple's documentation:
 
@@ -32,7 +32,7 @@ This command will have the effect as if the moment is now when iOS decided to la
 
 If instead of this message you encounter an error message, it could be due to testing on the simulator instead of a physical device, incorrect task identifiers entered in the Info.plist, or no tasks registered under that name (which means that the method registering them, such as sceneDidEnterBackground, might not have been triggered for some reason).
 
-![debugger2](./debugger2.png)
+<img src="./debugger2.png" height="300">
 
 After the appearance of the message indicating that the task has been simulated, you can click the Play button again to resume program execution. Now, you should see new data "from the server" being added to the application screen one by one, as if the feed is being refreshed. If you pause the execution of the code again and enter the same command in the debugger as before, but this time for the data cleaning task, and then resume code execution, all data should be removed from the screen, leaving it empty until we simulate the refresh task again, or until iOS itself restarts it. The refresh and removal of data should function on the same principle over time for the application.
 
